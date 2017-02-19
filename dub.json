@@ -1,0 +1,9 @@
+{
+	"name": "dtelnet",
+	"authors": [
+		"Mitchell"
+	],
+	"description": "An rpg/rougelite written in D, running through telnet.",
+	"copyright": "Copyright © 2017, Mitchell",
+	"license": "proprietary"
+}
