@@ -10,9 +10,11 @@ import player,
        server;
 
 class Game {
+    private const int w = 20, h = 40;
+
     private Player[int] players;
 
-    private char[20][20] map;
+    private char[h][w] map;
 
     // TODO: Put in enum
     /*public const byte[][string] keys = [
@@ -47,7 +49,7 @@ class Game {
     // Not the correct word, but I'd like to think it's the same concept
     public string rasterizeMap() {
       string rendered = "";
-      char[20][20] flattened;
+      char[h][w] flattened;
 
       // TODO: Remove this (actually like all of this) for something better
       for(int y = 0; y < flattened.length; y++)

@@ -17,7 +17,12 @@ So,
 TODOS:
 - Fix program structure. Creating a Game instance from the TelnetServer instance is NOT a good way to do this.
 - Research how safe it is to keep these thread objects kept stored with the player objects (most likely okay).
-- Draw a map and process input from multiple clients. A key step to actually making this a game.
+(kinda done) Draw a map and process input from multiple clients. A key step to actually making this a game.
+    - Now I need to make it so the screen is rendered to each client individually, allowing for different views on
+        each client
+    - I'm thinking the Player class will have to be upgraded, along with the Game class, and a possible new Map class
+    - The rendering might be a bit weird, but I don't think I should even consider attempting it until my whole program
+        structure is actually not shit
 
 FAR AWAY TODOS:
 - Create a class to manage the rendering (as in, like, hud info, the map, text, etc. all being organized

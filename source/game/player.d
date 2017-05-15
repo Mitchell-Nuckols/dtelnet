@@ -19,8 +19,6 @@ class Player {
     this(int id, ClientThread connection) {
         this.id = id;
 
-        if(id == 2) c = '$';
-
         this.connection = connection;
     }
 
@@ -30,10 +28,10 @@ class Player {
 
     // 0: UP 1: DOWN 2: RIGHT 3: LEFT
     public void input(byte[] input) {
-        if(input == [27, 91, 65]) y--;
-        if(input == [27, 91, 66]) y++;
-        if(input == [27, 91, 67]) x++;
-        if(input == [27, 91, 68]) x--;
+        if(input == [27, 91, 65] && y - 1 >= 0) y--;
+        if(input == [27, 91, 66] && y + 1 <= 19) y++;
+        if(input == [27, 91, 67] && x + 1 <= 39) x++;
+        if(input == [27, 91, 68] && x - 1 >= 0) x--;
     }
 
     public int getId() { return this.id; }

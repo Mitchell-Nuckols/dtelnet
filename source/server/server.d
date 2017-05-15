@@ -82,7 +82,7 @@ class TelnetServer {
 
             int received;
 
-            while(isEnabled) {
+            while(isEnabled && client.isAlive) {
                 byte[1024] buffer;
 
                 received = client.receive(buffer);
@@ -95,9 +95,9 @@ class TelnetServer {
             }
 
             client.shutdown(SocketShutdown.BOTH);
-            client.close();
+            client.close;
 
-            writeln("Disabled");
+            writeln("Client disconnected");
         }
 
         public void sendMessage(byte[] message) { client.send(message); }
